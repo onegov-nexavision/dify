@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import type { QuestionClassifierNodeType } from './types'
 import type { NodePanelProps } from '@/app/components/workflow/types'
+import { Select, SelectContent, SelectItem, SelectItemIndicator, SelectItemText, SelectTrigger, SelectValue } from '@langgenius/dify-ui/select'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import ModelParameterModal from '@/app/components/header/account-setting/model-provider-page/model-parameter-modal'
@@ -41,6 +42,7 @@ const Panel: FC<NodePanelProps<QuestionClassifierNodeType>> = ({
     handleVisionResolutionEnabledChange,
     filterVar,
     handleSortTopic,
+    handleTemplateNameChange,
   } = useConfig(id, data)
 
   const model = inputs.model
@@ -48,6 +50,33 @@ const Panel: FC<NodePanelProps<QuestionClassifierNodeType>> = ({
   return (
     <div className="pt-2">
       <div className="space-y-4 px-4">
+        <Field
+          title={t(`${i18nPrefix}.templateName`, { ns: 'workflow' })}
+        >
+          <Select
+            value={inputs.template_name}
+            onValueChange={handleTemplateNameChange}
+            disabled={readOnly}
+            items={{
+              'onegov': 'One Gov',
+              '': 'Default',
+            }}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select template" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="onegov">
+                <SelectItemText>One Gov</SelectItemText>
+                <SelectItemIndicator />
+              </SelectItem>
+              <SelectItem value="">
+                <SelectItemText>Default</SelectItemText>
+                <SelectItemIndicator />
+              </SelectItem>
+            </SelectContent>
+          </Select>
+        </Field>
         <Field
           title={t(`${i18nPrefix}.model`, { ns: 'workflow' })}
           required

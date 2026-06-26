@@ -908,6 +908,7 @@
   "nodes.questionClassifiers.outputVars.className": "Class Name",
   "nodes.questionClassifiers.outputVars.usage": "Model Usage Information",
   "nodes.questionClassifiers.renameHint": "Double-click class title to rename",
+  "nodes.questionClassifiers.templateName": "System prompt template",
   "nodes.questionClassifiers.topicName": "Topic Name",
   "nodes.questionClassifiers.topicPlaceholder": "Write your topic name",
   "nodes.start.builtInVar": "Built-in Variables",

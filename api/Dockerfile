@@ -18,6 +18,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
           # basic environment
           g++ \
+          git \
           # for building gmpy2
           libmpfr-dev libmpc-dev
 

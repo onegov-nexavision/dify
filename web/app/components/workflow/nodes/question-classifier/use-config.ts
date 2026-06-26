@@ -214,6 +214,13 @@ const useConfig = (id: string, payload: QuestionClassifierNodeType) => {
     return varPayload.type === VarType.string
   }, [])
 
+  const handleTemplateNameChange = useCallback((value: string) => {
+    setInputs({
+      ...inputRef.current,
+      template_name: value,
+    })
+  }, [])
+
   const handleSortTopic = useCallback((newTopics: (Topic & { id: string })[]) => {
     const newInputs = produce(inputs, (draft) => {
       const sortedTopics = newTopics.filter(Boolean)
@@ -251,6 +258,7 @@ const useConfig = (id: string, payload: QuestionClassifierNodeType) => {
     handleVisionResolutionEnabledChange,
     handleVisionResolutionChange,
     handleSortTopic,
+    handleTemplateNameChange,
   }
 }
 

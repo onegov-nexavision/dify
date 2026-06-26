@@ -50,6 +50,7 @@ const nodeDefault: NodeDefault<QuestionClassifierNodeType> = {
     vision: {
       enabled: false,
     },
+    template_name: 'onegov',
   },
   checkValid(payload: QuestionClassifierNodeType, t: TFunction<'workflow'>) {
     let errorMessages = ''

@@ -16,4 +16,5 @@ export type QuestionClassifierNodeType = CommonNodeType & {
     enabled: boolean
     configs?: VisionSetting
   }
+  template_name: string
 }
