@@ -1628,7 +1628,7 @@ requires-dist = [
     { name = "gmpy2", specifier = ">=2.3.0" },
     { name = "google-api-python-client", specifier = ">=2.196.0" },
     { name = "google-cloud-aiplatform", specifier = ">=1.151.0,<2.0.0" },
-    { name = "graphon", git = "https://github.com/onegov-nexavision/graphon.git?rev=e8804b86f0b2e9740539d4f4b5c16af27fa01a40" },
+    { name = "graphon", git = "https://github.com/onegov-nexavision/graphon.git?rev=06ffd84878e52e13debd7c67a3e8c2390fa64cb8" },
     { name = "gunicorn", specifier = ">=26.0.0" },
     { name = "httpx", extras = ["socks"], specifier = ">=0.28.1,<1.0.0" },
     { name = "httpx-sse", specifier = "~=0.4.0" },
@@ -2985,7 +2985,7 @@ httpx = [
 [[package]]
 name = "graphon"
 version = "0.4.0"
-source = { git = "https://github.com/onegov-nexavision/graphon.git?rev=e8804b86f0b2e9740539d4f4b5c16af27fa01a40#e8804b86f0b2e9740539d4f4b5c16af27fa01a40" }
+source = { git = "https://github.com/onegov-nexavision/graphon.git?rev=06ffd84878e52e13debd7c67a3e8c2390fa64cb8#06ffd84878e52e13debd7c67a3e8c2390fa64cb8" }
 dependencies = [
     { name = "charset-normalizer" },
     { name = "httpx" },

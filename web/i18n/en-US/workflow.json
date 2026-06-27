@@ -893,6 +893,7 @@
   "nodes.parameterExtractor.reasoningModeFunctionToolCalling": "Function/Tool Calling",
   "nodes.parameterExtractor.reasoningModePrompt": "Prompt",
   "nodes.parameterExtractor.reasoningModeTip": "You can choose the appropriate reasoning mode based on the model's ability to respond to instructions for function calling or prompts.",
+  "nodes.parameterExtractor.templateName": "System prompt template",
   "nodes.questionClassifiers.addClass": "Add Class",
   "nodes.questionClassifiers.advancedSetting": "Advanced Setting",
   "nodes.questionClassifiers.class": "Class",

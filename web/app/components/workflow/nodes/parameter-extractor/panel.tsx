@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import type { ParameterExtractorNodeType } from './types'
 import type { NodePanelProps } from '@/app/components/workflow/types'
+import { Select, SelectContent, SelectItem, SelectItemIndicator, SelectItemText, SelectTrigger, SelectValue } from '@langgenius/dify-ui/select'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Infotip } from '@/app/components/base/infotip'
@@ -52,6 +53,7 @@ const Panel: FC<NodePanelProps<ParameterExtractorNodeType>> = ({
     isVisionModel,
     handleVisionResolutionChange,
     handleVisionResolutionEnabledChange,
+    handleTemplateNameChange,
   } = useConfig(id, data)
 
   const model = inputs.model
@@ -59,6 +61,33 @@ const Panel: FC<NodePanelProps<ParameterExtractorNodeType>> = ({
   return (
     <div className="pt-2">
       <div className="space-y-4 px-4">
+        <Field
+          title={t(`${i18nPrefix}.templateName`, { ns: 'workflow' })}
+        >
+          <Select
+            value={inputs.template_name}
+            onValueChange={handleTemplateNameChange}
+            disabled={readOnly}
+            items={{
+              'onegov': 'One Gov',
+              '': 'Default',
+            }}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select template" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="onegov">
+                <SelectItemText>One Gov</SelectItemText>
+                <SelectItemIndicator />
+              </SelectItem>
+              <SelectItem value="">
+                <SelectItemText>Default</SelectItemText>
+                <SelectItemIndicator />
+              </SelectItem>
+            </SelectContent>
+          </Select>
+        </Field>
         <Field
           title={t(`${i18nCommonPrefix}.model`, { ns: 'workflow' })}
           required

@@ -97,7 +97,7 @@ dify-trace-mlflow = { workspace = true }
 dify-trace-opik = { workspace = true }
 dify-trace-tencent = { workspace = true }
 dify-trace-weave = { workspace = true }
-graphon = { git = "https://github.com/onegov-nexavision/graphon.git", rev = "e8804b86f0b2e9740539d4f4b5c16af27fa01a40" }
+graphon = { git = "https://github.com/onegov-nexavision/graphon.git", rev = "06ffd84878e52e13debd7c67a3e8c2390fa64cb8" }
 
 [tool.uv]
 default-groups = ["storage", "tools", "vdb-all", "trace-all"]

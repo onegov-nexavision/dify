@@ -222,6 +222,13 @@ const useConfig = (id: string, payload: ParameterExtractorNodeType) => {
     setInputs(newInputs)
   }, [inputs, setInputs])
 
+  const handleTemplateNameChange = useCallback((value: string) => {
+    setInputs({
+      ...inputRef.current,
+      template_name: value,
+    })
+  }, [])
+
   return {
     readOnly,
     handleInputVarChange,
@@ -245,6 +252,7 @@ const useConfig = (id: string, payload: ParameterExtractorNodeType) => {
     isVisionModel,
     handleVisionResolutionEnabledChange,
     handleVisionResolutionChange,
+    handleTemplateNameChange,
   }
 }
 

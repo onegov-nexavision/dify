@@ -35,4 +35,5 @@ export type ParameterExtractorNodeType = CommonNodeType & {
     enabled: boolean
     configs?: VisionSetting
   }
+  template_name: string
 }
